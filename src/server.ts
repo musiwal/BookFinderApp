@@ -35,7 +35,7 @@ export class BookServer {
         );
         app.use(
             cors({
-                origin: "*",
+                origin: ['https://mybook-finder-api.herokuapp.com'],
                 credentials: true
             })
         );
