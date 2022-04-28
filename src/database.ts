@@ -1,9 +1,13 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv'
+dotenv.config();
+
+var url = process.env.MONGO_URI || 'mongodb://localhost:27017/book-finder'
 
 export default () => {
     const connect = () => {
         mongoose
-            .connect('mongodb://localhost:27017/book-finder')
+            .connect(url)
             .then(() => {
                 return console.log('Successfully connected to database.');
             })
