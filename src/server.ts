@@ -7,7 +7,7 @@ import 'express-async-errors';
 import { CustomError, IErrorResponse } from './helpers/error-handler';
 import applicationRoutes from './baseRoutes';
 
-const SERVER_PORT = 5000;
+const SERVER_PORT = process.env.PORT || 5000;
 
 export class BookServer {
     private app: Application;
