@@ -1,0 +1,144 @@
+# SIGNUP ENDPOINT
+
+###
+POST http://localhost:5000/api/v1/auth/signup
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+{
+    "fullname": "Manny Gordon",
+    "email": "manny@test.com",
+    "password": "test1234",
+    "city": "Dusseldorf"
+}
+
+# LOGIN ENDPOINT
+
+###
+POST http://localhost:5000/api/v1/auth/signin
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+{
+    "email": "manny@test.com",
+    "password": "test1234"
+}
+
+# SIGNOUT ENDPOINT
+
+###
+GET http://localhost:5000/api/v1/auth/signout
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+# GET ALL BOOKS WITH PAGINATION ENDPOINT
+
+###
+GET https://127.0.0.1:5000/api/v1/books/1
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+# GET SINGLE BOOK ENDPOINT
+
+###
+GET http://localhost:5000/api/v1/book/:bookId
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+{}
+
+# SEARCH FOR BOOKS ENDPOINT
+
+###
+GET http://localhost:5000/api/v1/book/mobile
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+# Click this endpoint only once to add the books to the database
+# If you click it multiple time, there will be duplicates in the database
+###
+POST http://localhost:5000/api/v1/book/add
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+{}
+
+# GET ALL COMMENTS FOR A BOOK ENDPOINT
+
+###
+GET http://localhost:5000/api/v1/comment/book/:bookId
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+{}
+
+# CREATE COMMENT AND RATING ENDPOINT
+
+###
+POST http://localhost:5000/api/v1/comment/book
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+{
+    "bookId": "", 
+    "rating": "", 
+    "comment": ""
+}
+
+# UPDATE COMMENT AND RATING ENDPOINT
+
+###
+PUT http://localhost:5000/api/v1/comment/book/:bookId/:commentId
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+{
+    "rating": "", 
+    "comment": ""
+}
+
+# DELETE COMMENT AND RATING ENDPOINT
+
+###
+DELETE http://localhost:5000/api/v1/comment/book/:bookId/:commentId
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+# GET USER PROFILE ENDPOINT
+
+###
+GET http://localhost:5000/api/v1/user
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+# ADD BOOK TO FAVORITES ENDPOINT
+
+###
+PUT http://localhost:5000/api/v1/user/book/:bookId
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+{}
+
+# DELETE BOOK FROM FAVORITES ENDPOINT
+
+###
+DELETE http://localhost:5000/api/v1/user/book/:bookId
+content-type: application/json
+Accept: 'application/json'
+withCredentials: true
+
+{}
