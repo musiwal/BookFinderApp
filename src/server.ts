@@ -35,7 +35,7 @@ export class BookServer {
         );
         app.use(
             cors({
-                origin: ['http://localhost:3000', 'https://mybook-finder.herokuapp.com'],
+                origin: ['http://localhost:3000', 'https://mybook-finder.netlify.app'],
                 credentials: true
             })
         );
