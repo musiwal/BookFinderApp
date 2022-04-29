@@ -31,6 +31,8 @@ export class BookServer {
             cookieSession({
                 name: 'session',
                 keys: ['key1', 'key2'],
+                sameSite: 'none',
+                secure: true
             })
         );
         app.use(
